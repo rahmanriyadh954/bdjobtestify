@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Signed-in areas hold personal data and have nothing for crawlers
+Disallow: /admin
+Disallow: /exam
+Disallow: /results
+
+Sitemap: https://bdjobtestify.com/sitemap.xml
