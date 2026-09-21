@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import {
     Clock, Send, AlertTriangle, CheckCircle2,
-    Circle, ShieldAlert, PenLine, Info, Sparkles, Camera, X, Image,
+    Circle, ShieldAlert, PenLine, Info, Sparkles, Camera, X,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useExam } from '../../context/ExamContext';

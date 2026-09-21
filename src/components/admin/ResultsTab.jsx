@@ -14,7 +14,7 @@ import { ResultView } from '../student/ResultView';
 import { assessWrittenAnswer, isAIConfigured } from '../../services/aiService';
 
 export const ResultsTab = ({ onViewStudent }) => {
-    const { results, publishedTests, modelTests, loading, refresh } = useExam();
+    const { results, modelTests, loading, refresh } = useExam();
     const [search, setSearch] = useState('');
     const [fTest, setFTest] = useState('all');
     const [fStatus, setFStatus] = useState('all');
@@ -264,7 +264,6 @@ const WrittenGrader = ({ result, onClose }) => {
     };
 
     const gradeAllAI = async () => {
-        const pending = items?.filter((item, i) => !done.some(d => d.idx === i)) || [];
         for (let i = 0; i < items.length; i++) {
             if (done.some(d => d.idx === i)) continue;
             await gradeOneAI(items[i], i);

@@ -46,9 +46,18 @@ export const ResultView = ({ result, resultId, onClose }) => {
     }, [showReview, data, id, getResultReview]);
 
     const r = data?.result || result;
-    const questions = data?.questions || [];
+
+    const questions = useMemo(
+        () => data?.questions || [],
+        [data?.questions]
+    );
+
     const assessments = data?.assessments || [];
-    const answers = r?.answers || {};
+
+    const answers = useMemo(
+        () => r?.answers || {},
+        [r?.answers]
+    );
 
     const passed = r?.passed;
     const pct = Math.round(Number(r?.percentage) || 0);
