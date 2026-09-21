@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-    LayoutDashboard, Library, CalendarCog, ClipboardList, Users, BarChart3,
+    LayoutDashboard, Library, Calendar, ClipboardList, Users, BarChart3,
     BookOpen, History, GraduationCap, Menu, X, Sun, Moon, LogOut,
     ShieldCheck, KeyRound, AlertCircle, Database,
 } from 'lucide-react';
@@ -35,7 +35,7 @@ import './styles/global.css';
 const ADMIN_NAV = [
     { key: 'overview', label: 'Dashboard',       icon: LayoutDashboard },
     { key: 'studio',   label: 'Exam Studio',     icon: Library },
-    { key: 'schedule', label: 'Exam Schedule',   icon: CalendarCog },
+    { key: 'schedule', label: 'Exam Schedule',   icon: Calendar },
     { key: 'results',  label: 'Results',         icon: ClipboardList },
     { key: 'reports',  label: 'Student Reports', icon: BarChart3 },
     { key: 'users',    label: 'User Accounts',   icon: Users },
