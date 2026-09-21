@@ -17,6 +17,7 @@
 export const cleanText = (input, maxLength = 20000) => {
     if (input === null || input === undefined) return '';
     let s = String(input);
+    // eslint-disable-next-line no-control-regex
     s = s.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, ''); // control chars
     s = s.replace(/<\s*\/?\s*(script|iframe|object|embed|link|meta)\b[^>]*>/gi, '');
     s = s.replace(/\son\w+\s*=\s*(["'][^"']*["']|[^\s>]+)/gi, '');        // onclick= etc
